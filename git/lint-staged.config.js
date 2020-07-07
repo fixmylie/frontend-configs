@@ -1,5 +1,9 @@
+exports.lintMD = {
+  "*.md": ["remark . -o --"],
+};
+
 module.exports = {
-  "*.{js,jsx,ts,tsx}": ["eslint --fix"],
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
   "*.css": ["stylelint --fix"],
-  "*.{js,jsx,ts,tsx, json,md}": ["prettier --write"],
+  "*.json": ["prettier --write"],
 };
